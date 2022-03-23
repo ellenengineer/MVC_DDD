@@ -12,6 +12,8 @@ namespace ATS.Application.DI {
             services.AddDbContext<AppDbContext> (options => options.UseSqlServer (conection));
 
             services.AddScoped (typeof (IRepository<Marca>), typeof (MarcaRepository));
+            services.AddScoped(typeof(IRepository<Veiculo>), typeof(VeiculoRepository));
+            services.AddScoped(typeof(IRepository<Proprietario>), typeof(ProprietarioRepository));
             services.AddScoped (typeof (IRepository<>), typeof (Repository<>));
             services.AddScoped (typeof (IUnitOfWork), typeof (UnitOfWork));
         }

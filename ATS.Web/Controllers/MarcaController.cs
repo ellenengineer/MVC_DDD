@@ -46,8 +46,14 @@ namespace ATS.Web.Controllers
             if (marca == null)
                 return NotFound();
 
-            _marcaRepository.Save(marca);
-
+            try
+            {
+                _marcaRepository.Save(marca);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return Ok();
         }
 
@@ -59,8 +65,14 @@ namespace ATS.Web.Controllers
                 if (marca == null)
                     return NotFound();
 
-                _marcaRepository.Update(marca);
-
+                try
+                {
+                    _marcaRepository.Update(marca);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
                 return Ok();
             }
             catch(Exception ex)

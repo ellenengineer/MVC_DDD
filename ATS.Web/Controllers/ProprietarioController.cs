@@ -46,8 +46,14 @@ namespace ATS.Web.Controllers
             if (propr == null)
                 return NotFound();
 
-            _propRepository.Save(propr);
-
+            try
+            {
+                _propRepository.Save(propr);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return Ok();
         }
 
@@ -65,7 +71,7 @@ namespace ATS.Web.Controllers
             }
             catch(Exception ex)
             {
-                throw ex ;
+                return BadRequest(ex.Message);
             }
 
             return BadRequest();

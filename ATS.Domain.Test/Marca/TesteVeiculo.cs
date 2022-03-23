@@ -52,7 +52,7 @@ namespace ATS.Domain.Test
                                                        ,AnoFabricacao = VeicEsperado.AnoFabricacao
                                                        ,AnoModelo = VeicEsperado.AnoModelo
                                                        ,Quilometragem = VeicEsperado.Quilometragem
-                                                       ,Valor = (double)VeicEsperado.Valor
+                                                       ,Valor = (decimal)VeicEsperado.Valor
                                                        ,Status = VeicEsperado.Status };
 
             VeicEsperado.ToExpectedObject().ShouldMatch(veic);
@@ -106,7 +106,7 @@ namespace ATS.Domain.Test
                                                      ,
                 Quilometragem = VeicEsperado.Quilometragem
                                                      ,
-                Valor = (double)VeicEsperado.Valor
+                Valor = (decimal)VeicEsperado.Valor
                                                      ,
                 Status = VeicEsperado.Status
             };
@@ -126,7 +126,7 @@ namespace ATS.Domain.Test
                                                      ,
                 Quilometragem = VeicEsperado.Quilometragem
                                                      ,
-                Valor = (double)VeicEsperado.Valor
+                Valor = (decimal)VeicEsperado.Valor
                                                      ,
                 Status = VeicEsperado.Status
             }).ValidarMensagem(mensagemError);
@@ -181,7 +181,7 @@ namespace ATS.Domain.Test
                                                       ,
                 Quilometragem = VeicEsperado.Quilometragem
                                                       ,
-                Valor = (double)VeicEsperado.Valor
+                Valor = (decimal)VeicEsperado.Valor
                                                       ,
                 Status = VeicEsperado.Status
             };
@@ -202,7 +202,7 @@ namespace ATS.Domain.Test
                                                      ,
                 Quilometragem = VeicEsperado.Quilometragem
                                                      ,
-                Valor = (double)VeicEsperado.Valor
+                Valor = (decimal)VeicEsperado.Valor
                                                      ,
                 Status = VeicEsperado.Status
             }).ValidarMensagem(mensagemError);
@@ -237,7 +237,7 @@ namespace ATS.Domain.Test
                 AnoFabricacao = "2007/2008",
                 AnoModelo = 2007,
                 Quilometragem = "5000km",
-                Valor = 20000.00,
+                Valor = 20000.00M,
                 Status = "A"
             };
 
@@ -294,7 +294,7 @@ namespace ATS.Domain.Test
                 AnoFabricacao = "2007/2008",
                 AnoModelo = 2007,
                 Quilometragem = "5000km",
-                Valor = 20000.00,
+                Valor = 20000.00M,
                 Status = "D"
             };
 
@@ -345,7 +345,7 @@ namespace ATS.Domain.Test
                 AnoFabricacao = "2007/2008",
                 AnoModelo = 2007,
                 Quilometragem = "5000km",
-                Valor = 20000.00,
+                Valor = 20000.00M,
                 Status = "D"
             };
 

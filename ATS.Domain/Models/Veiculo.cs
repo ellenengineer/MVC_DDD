@@ -12,32 +12,36 @@ namespace ATS.Domain.Models
     {
 
         [Required(ErrorMessage = "O Proprietario é obrigatório!")]
-        public Proprietario Proprietarios { get; set; }
+        public int ProprietariosId { get; set; }    
+
+        public Proprietario? Proprietarios { get; set; }
 
         [Required(ErrorMessage = "A Marca é obrigatória!")]
-        public Marca Marca { get; set; }
+        public int MarcaId { get; set; }
+
+        public Marca? Marca { get; set; }
 
         [Required(ErrorMessage = "O RENAVAM é obrigatório!")]
-        public string RENAVAM { get; set; }
+        public string? RENAVAM { get; set; }
 
         [Required(ErrorMessage = "O Modelo é obrigatório!")]
-        public string Modelo { get; set; }
+        public string? Modelo { get; set; }
 
         [Required(ErrorMessage = "O Ano de Fabricacao é obrigatório!")]
-        public string AnoFabricacao { get; set; }
+        public string? AnoFabricacao { get; set; }
 
         [Required(ErrorMessage = "O Ano do modelo é obrigatório!")]
         public int AnoModelo { get; set; }
 
         [Required(ErrorMessage = "A Quilometragem é obrigatória!")]
-        public string Quilometragem { get; set; }
+        public string? Quilometragem { get; set; }
 
         [Required(ErrorMessage = "O Valor é obrigatório!")]
-        public double Valor { get; set; }
+        public decimal Valor { get; set; }
 
 
         [Required(ErrorMessage = "O Status é obrigatório!")]
         [StatusVeiculoValidator(ErrorMessage = "Status deverá ser Disponível (D), indisponível (I) ou Vendido (V)")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
     }
 }

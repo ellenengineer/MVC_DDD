@@ -45,9 +45,14 @@ namespace ATS.Web.Controllers
         {
             if (veic == null)
                 return NotFound();
-
-            _veiculoRepository.Save(veic);
-
+            try
+            {
+                _veiculoRepository.Save(veic);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return Ok();
         }
 
@@ -65,7 +70,7 @@ namespace ATS.Web.Controllers
             }
             catch(Exception ex)
             {
-                throw ex ;
+                return BadRequest(ex.Message);
             }
 
             return BadRequest();

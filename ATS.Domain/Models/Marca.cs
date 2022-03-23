@@ -9,11 +9,11 @@ namespace ATS.Domain.Models
     {
 
         [Required(ErrorMessage = "Nome do Marca é obrigatório!")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Required(ErrorMessage = "Status da Marca é obrigatório!")]
         [StatusMarcaPropValidator(ErrorMessage ="Status deverá ser Ativo (A) ou Cancelado (C)")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
 
     }
